@@ -1,401 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Ogbodu — Cloud Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/4215/4215831.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James Ogbodu — Cloud Engineer</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <aside class="sidebar" data-sidebar>
-            <div class="sidebar-info">
-                <figure class="avatar-box">
-                    <!-- Replace with your actual photo -->
-                    <img src="portfolio/profile pic.jpg" alt="James Ogbodu" width="80">
-                </figure>
 
-                <div class="info-content">
-                    <h1 class="name" title="James Ogbodu">James Ogbodu</h1>
-                    <p class="title">AWS Cloud Engineer</p>
-                </div>
+<div id="prog"></div>
+<button id="btt" aria-label="Back to top">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+<div id="cur"></div>
+<div id="ring"></div>
+<canvas id="cvs"></canvas>
+<button id="tbtn">&#9728; LIGHT MODE</button>
 
-                <button class="info-more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-            </div>
+<nav>
+  <a class="nd active" href="#hero" data-s="hero"><div class="dot"></div><span class="lbl">Home</span></a>
+  <a class="nd" href="#about" data-s="about"><div class="dot"></div><span class="lbl">About</span></a>
+  <a class="nd" href="#portfolio" data-s="portfolio"><div class="dot"></div><span class="lbl">Portfolio</span></a>
+  <a class="nd" href="#resume" data-s="resume"><div class="dot"></div><span class="lbl">Resume</span></a>
+  <a class="nd" href="#contact" data-s="contact"><div class="dot"></div><span class="lbl">Contact</span></a>
+</nav>
 
-            <div class="sidebar-info-more">
-                <div class="separator"></div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div>
+    <div class="profile-wrap">
+      <img src="portfolio/profile pic.jpg" alt="James Ogbodu" class="profile-img"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="profile-init">JO</div>
+    </div>
+    <div class="status"><div class="sdot"></div>Available for remote roles</div>
+    <h1 class="hname">James<br><span>Ogbodu</span></h1>
+    <p class="htitle">AWS Cloud Engineer <b>//</b> Lagos, Nigeria</p>
+    <div class="term">
+      <span class="p">$ </span><span class="c" id="typed"></span><span class="cblink" id="caret">_</span>
+      <span class="o" id="tout">// Certified &middot; Building &middot; Deploying</span>
+    </div>
+    <div class="cta">
+      <a href="#portfolio" class="btn1">View Projects</a>
+      <a href="#about" class="btn2">About Me</a>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">3+</div><div class="stat-lbl">AWS Projects</div></div>
+      <div class="stat-div"></div>
+      <div class="stat"><div class="stat-num">AWS</div><div class="stat-lbl">Certified CCP</div></div>
+      <div class="stat-div"></div>
+      <div class="stat"><div class="stat-num">&#127758;</div><div class="stat-lbl">Remote Ready</div></div>
+    </div>
+  </div>
+  <div class="hvis">
+    <svg viewBox="0 0 340 400" xmlns="http://www.w3.org/2000/svg" style="width:100%">
+      <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#ff9900" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      <line x1="170" y1="56" x2="76" y2="120" stroke="#ff9900" stroke-width=".8" stroke-dasharray="4 3" opacity=".5" marker-end="url(#arr)"/>
+      <line x1="170" y1="56" x2="264" y2="120" stroke="#ff9900" stroke-width=".8" stroke-dasharray="4 3" opacity=".5" marker-end="url(#arr)"/>
+      <line x1="76" y1="172" x2="76" y2="232" stroke="#ff9900" stroke-width=".8" stroke-dasharray="4 3" opacity=".5" marker-end="url(#arr)"/>
+      <line x1="264" y1="172" x2="172" y2="232" stroke="#00d4ff" stroke-width=".8" stroke-dasharray="4 3" opacity=".5" marker-end="url(#arr)"/>
+      <line x1="76" y1="284" x2="172" y2="320" stroke="#ff9900" stroke-width=".8" stroke-dasharray="4 3" opacity=".5" marker-end="url(#arr)"/>
+      <line x1="172" y1="284" x2="172" y2="320" stroke="#00d4ff" stroke-width=".8" stroke-dasharray="4 3" opacity=".5" marker-end="url(#arr)"/>
+      <rect x="140" y="18" width="60" height="34" rx="5" fill="#0f1923" stroke="#ff9900" stroke-width="1"/><text x="170" y="39" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#ff9900">USER</text>
+      <rect x="36" y="110" width="80" height="58" rx="5" fill="#0f1923" stroke="#ff9900" stroke-width="1"/><text x="76" y="136" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#ff9900">CloudFront</text><text x="76" y="152" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#4a5568">CDN + HTTPS</text>
+      <rect x="224" y="110" width="80" height="58" rx="5" fill="#0f1923" stroke="#00d4ff" stroke-width="1"/><text x="264" y="136" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#00d4ff">API Gateway</text><text x="264" y="152" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#4a5568">HTTP API</text>
+      <rect x="36" y="222" width="80" height="58" rx="5" fill="#0f1923" stroke="#ff9900" stroke-width="1"/><text x="76" y="248" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#ff9900">Amazon S3</text><text x="76" y="264" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#4a5568">Static Files</text>
+      <rect x="132" y="222" width="80" height="58" rx="5" fill="#0f1923" stroke="#00d4ff" stroke-width="1"/><text x="172" y="248" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#00d4ff">Lambda</text><text x="172" y="264" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#4a5568">Python</text>
+      <rect x="132" y="310" width="80" height="58" rx="5" fill="#0f1923" stroke="#00e676" stroke-width="1"/><text x="172" y="336" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#00e676">DynamoDB</text><text x="172" y="352" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#4a5568">NoSQL DB</text>
+      <circle r="3" fill="#ff9900" opacity=".9"><animateMotion dur="3s" repeatCount="indefinite" path="M170,52 L76,110"/></circle>
+      <circle r="3" fill="#00d4ff" opacity=".9"><animateMotion dur="3.5s" repeatCount="indefinite" begin="1s" path="M264,168 L172,222"/></circle>
+      <circle r="3" fill="#00e676" opacity=".9"><animateMotion dur="2.5s" repeatCount="indefinite" begin=".5s" path="M172,280 L172,310"/></circle>
+    </svg>
+  </div>
+</section>
 
-                <ul class="contacts-list">
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-                            <a href="mailto:Jamesogbodu18@gmail.com" class="contact-link">Jamesogbodu18@gmail.com</a>
-                        </div>
-                    </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-                            <address>Lagos, Nigeria</address>
-                        </div>
-                    </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ff9900"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title">LinkedIn</p>
-                            <a href="https://www.linkedin.com/in/james-ogbodu-18953427a" class="contact-link" target="_blank">linkedin.com/in/james-ogbodu</a>
-                        </div>
-                    </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#ff9900"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title">GitHub</p>
-                            <a href="https://github.com/James-Tega" class="contact-link" target="_blank">github.com/James-Tega</a>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-                    <li class="social-item"><a href="https://www.linkedin.com/in/james-ogbodu-18953427a" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li class="social-item"><a href="https://github.com/James-Tega" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
-                    <li class="social-item"><a href="https://x.com/jamesogbod96056" class="social-link" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                </ul>
-
-                <div class="separator"></div>
-
-                <div class="visitor-counter">
-                    <ion-icon name="eye-outline"></ion-icon>
-                    <span>Visitors: <strong id="visitor-count">—</strong></span>
-                </div>
-            </div>
-        </aside>
-
-        <div class="main-content">
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-                </ul>
-            </nav>
-
-            <!-- ABOUT -->
-            <article class="about active" data-page="about">
-                <header>
-                    <h2 class="h2 article-title">About Me</h2>
-                </header>
-
-                <section class="about-text">
-                    <p>I'm a Computer Technology graduate and AWS-certified cloud engineer based in Lagos, Nigeria. I'm passionate about building scalable, cost-efficient cloud infrastructure that solves real problems.</p>
-                    <p>My focus is on hands-on cloud engineering — designing and deploying real-world AWS solutions. I believe the best way to demonstrate cloud expertise is to build with it, which is why every skill I have is backed by a real project.</p>
-                </section>
-
-                <section class="service">
-                    <h3 class="h3 service-title">What I Do</h3>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Cloud Infrastructure</h4>
-                                <p class="service-item-text">Designing and deploying scalable, secure cloud architectures on AWS using services like EC2, S3, VPC, and CloudFront.</p>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Serverless Solutions</h4>
-                                <p class="service-item-text">Building event-driven, serverless applications using AWS Lambda, API Gateway, and DynamoDB for cost-efficient backends.</p>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg>
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Cloud Automation</h4>
-                                <p class="service-item-text">Automating infrastructure deployment and management using Python scripting, AWS CLI, and CI/CD pipelines with GitHub Actions.</p>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Cloud Security</h4>
-                                <p class="service-item-text">Implementing least-privilege IAM policies, secure VPC configurations, and best practices for protecting cloud resources.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
-
-            </article>
-
-            <!-- RESUME -->
-            <article class="resume" data-page="resume">
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                </header>
-
-                <section class="timeline">
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
-                        </div>
-                        <h3 class="h3">Education</h3>
-                    </div>
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">B.Sc. Computer Technology — GPA 3.69</h4>
-                            <span>Babcock University · 2021 – 2025</span>
-                            <p class="timeline-text">Studied core computing principles including programming fundamentals, computer architecture, operating systems, databases, networking, and software engineering. Built a strong foundation that underpins my cloud engineering practice today.</p>
-                        </li>
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Senior Secondary School Certificate</h4>
-                            <span>Beacon Light High School · 2015 – 2021</span>
-                            <p class="timeline-text">Completed secondary education with a focus on science and mathematics, building foundational analytical and problem-solving skills.</p>
-                        </li>
-                    </ol>
-                </section>
-
-                <section class="timeline">
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                        </div>
-                        <h3 class="h3">Experience</h3>
-                    </div>
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Freelance Cloud Supporter</h4>
-                            <span>Self-Employed · 2024 – Present</span>
-                            <p class="timeline-text">Provide cloud support services to clients including deploying and configuring AWS infrastructure, troubleshooting cloud environments, advising on cost optimisation strategies, setting up IAM roles and security policies, and assisting with static website hosting on S3 with CloudFront delivery.</p>
-                        </li>
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">IT Department Intern</h4>
-                            <span>Independent National Electoral Commission (INEC) · 7 Months</span>
-                            <p class="timeline-text">Supported the IT department with systems administration, hardware maintenance, and technical support within a large government institution. Gained hands-on exposure to enterprise IT infrastructure, internal network management, and operational troubleshooting in a high-pressure environment.</p>
-                        </li>
-                    </ol>
-                </section>
-
-                <section class="skill">
-                    <h3 class="h3 skills-title">Technical Skills</h3>
-                    <ul class="skills-list content-card">
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">AWS Core Services (EC2, S3, IAM, VPC)</h5>
-                                <data value="75">75%</data>
-                            </div>
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 75%;"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Serverless (Lambda, API Gateway, DynamoDB)</h5>
-                                <data value="65">65%</data>
-                            </div>
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 65%;"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Python</h5>
-                                <data value="60">60%</data>
-                            </div>
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 60%;"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Terraform</h5>
-                                <data value="20">20%</data>
-                            </div>
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 20%;"></div>
-                            </div>
-                        </li>
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">HTML & CSS</h5>
-                                <data value="70">70%</data>
-                            </div>
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 70%;"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
-                <section class="timeline">
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                        </div>
-                        <h3 class="h3">Certifications</h3>
-                    </div>
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">AWS Certified Cloud Practitioner — CLF-C02</h4>
-                            <span>Amazon Web Services</span>
-                            <p class="timeline-text">Validated foundational cloud knowledge across core AWS domains.</p>
-                            <ul class="cert-bullets">
-                                <li><span class="cert-pill">☁️ Cloud Concepts</span></li>
-                                <li><span class="cert-pill">🏗️ AWS Infrastructure</span></li>
-                                <li><span class="cert-pill">🔐 Security &amp; Compliance</span></li>
-                            </ul>
-                        </li>
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Certificate of Completion</h4>
-                            <span>New Horizons</span>
-                            <p class="timeline-text">Completed an industry-aligned technical certification covering key IT and computing competencies.</p>
-                        </li>
-                    </ol>
-                </section>
-            </article>
-
-            <!-- PORTFOLIO -->
-            <article class="portfolio" data-page="portfolio">
-                <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
-                </header>
-
-                <section class="projects">
-                    <ul class="filter-list">
-                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-                        <li class="filter-item"><button data-filter-btn>Serverless</button></li>
-                        <li class="filter-item"><button data-filter-btn>Static Hosting</button></li>
-                        <li class="filter-item"><button data-filter-btn>Automation</button></li>
-                    </ul>
-
-                    <div class="filter-select-box">
-                        <button class="filter-select" data-select>
-                            <div class="select-value" data-select-value>Select Category</div>
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-                        </button>
-                        <ul class="select-list">
-                            <li class="select-item"><button data-select-item>All</button></li>
-                            <li class="select-item"><button data-select-item>Serverless</button></li>
-                            <li class="select-item"><button data-select-item>Static Hosting</button></li>
-                            <li class="select-item"><button data-select-item>Automation</button></li>
-                        </ul>
-                    </div>
-
-                    <ul class="project-list">
-                        <li class="project-item active" data-filter-item data-category="serverless">
-                            <a href="https://d3jd94tvt098le.cloudfront.net" target="_blank">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="portfolio/feedback-preview.png" alt="Serverless Feedback App" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Serverless Feedback App</h3>
-                                <p class="project-category">Serverless · Lambda · DynamoDB</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="serverless">
-                            <a href="#" target="_blank">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-                                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&auto=format&fit=crop&q=60" alt="Cloud Portfolio Challenge" loading="lazy">
-                                </figure>
-                                <h3 class="project-title">Cloud Portfolio Challenge</h3>
-                                <p class="project-category">Serverless · Static Hosting</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active coming-soon-item" data-filter-item data-category="automation">
-                            <a href="#">
-                                <figure class="project-img coming-soon-img">
-                                    <div class="coming-soon-overlay">
-                                        <ion-icon name="construct-outline"></ion-icon>
-                                        <p>Coming Soon</p>
-                                    </div>
-                                </figure>
-                                <h3 class="project-title">AWS Automation Project</h3>
-                                <p class="project-category">Automation</p>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <!-- CONTACT -->
-            <article class="contact" data-page="contact">
-                <header>
-                    <h2 class="h2 article-title">Contact</h2>
-                </header>
-
-                <section class="contact-form">
-                    <h3 class="h3 form-title">Get In Touch</h3>
-                    <form action="#" class="form" data-form>
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
-                        </div>
-                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input=""></textarea>
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
-                    </form>
-                </section>
-            </article>
-
+<!-- ABOUT -->
+<section id="about">
+  <div style="max-width:960px;width:100%">
+    <div class="reveal">
+      <div class="slbl">About</div>
+      <h2 class="stitle">Who I am &amp;<br>what I do</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>I'm a Computer Technology graduate and AWS-certified cloud engineer based in Lagos, Nigeria. I build scalable, cost-efficient cloud infrastructure that solves real problems — not just theoretical solutions, but deployed systems that actually run.</p>
+        <p>I got into cloud after realising that infrastructure is the foundation everything else is built on. A great app means nothing if it can't scale, stay secure, and stay online. That's the problem I want to solve.</p>
+        <p>I'm actively building toward a remote cloud engineering role. Every project I ship is another proof point that I can operate in a real cloud environment — not just pass a certification exam.</p>
+      </div>
+      <div class="about-services">
+        <div class="svc">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aws)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></div>
+          <div class="svc-title">Cloud Infrastructure</div>
+          <div class="svc-desc">EC2, S3, VPC, CloudFront — scalable and secure by default.</div>
         </div>
-    </main>
+        <div class="svc">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aws)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="svc-title">Serverless</div>
+          <div class="svc-desc">Lambda, API Gateway, DynamoDB — zero servers, near-zero cost.</div>
+        </div>
+        <div class="svc">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aws)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div class="svc-title">Automation</div>
+          <div class="svc-desc">Python, AWS CLI, GitHub Actions — infrastructure that runs itself.</div>
+        </div>
+        <div class="svc">
+          <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--aws)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="svc-title">Cloud Security</div>
+          <div class="svc-desc">Least-privilege IAM, secure VPCs, and proper access controls.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="main.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div style="max-width:960px;width:100%">
+    <div class="reveal">
+      <div class="slbl">Portfolio</div>
+      <h2 class="stitle">Projects I've<br>built on AWS</h2>
+    </div>
+    <div class="filters reveal" id="filters">
+      <button class="fb on" data-filter="all">All</button>
+      <button class="fb" data-filter="serverless">Serverless</button>
+      <button class="fb" data-filter="static">Static Hosting</button>
+      <button class="fb" data-filter="database">Database</button>
+    </div>
+    <div class="pgrid reveal">
+      <div class="pcard" data-cat="serverless">
+        <div class="pthumb">
+          <img src="portfolio/feedback-preview.png" alt="Feedback App" onerror="this.parentElement.style.background='#162030'">
+          <div class="pov"></div>
+        </div>
+        <div class="pbody">
+          <div class="ptags"><span class="ptag">Lambda</span><span class="ptag">API Gateway</span><span class="ptag">DynamoDB</span><span class="ptag">S3</span><span class="ptag">CloudFront</span></div>
+          <div class="pname">Serverless Feedback App</div>
+          <div class="pdesc">Fully serverless feedback form. Lambda processes submissions and stores in DynamoDB. Zero servers, near-zero cost.</div>
+          <div class="plinks">
+            <a href="https://d3jd94tvt098le.cloudfront.net" target="_blank" class="plink">Live <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="https://github.com/James-Tega/Severless-feedback" target="_blank" class="plink ghost">Source Code <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="pcard" data-cat="static">
+        <div class="pcs"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Coming Soon</div>
+        <div class="pbody">
+          <div class="ptags"><span class="ptag">S3</span><span class="ptag">CloudFront</span><span class="ptag">Lambda</span></div>
+          <div class="pname">Cloud Portfolio Challenge</div>
+          <div class="pdesc">This portfolio site hosted on S3 + CloudFront with a serverless visitor counter backend.</div>
+          <div class="plinks">
+            <a href="https://github.com/James-Tega/cloud-portfolio" target="_blank" class="plink ghost">Source Code <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="pcard" data-cat="database">
+        <div class="pcs"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Coming Soon</div>
+        <div class="pbody">
+          <div class="ptags"><span class="ptag">EC2</span><span class="ptag">RDS</span><span class="ptag">PHP</span><span class="ptag">MySQL</span></div>
+          <div class="pname">EC2 + RDS User Registration</div>
+          <div class="pdesc">PHP + MySQL on EC2 connected to Amazon RDS. Full database integration with VPC security groups.</div>
+          <div class="plinks">
+            <a href="https://github.com/James-Tega" target="_blank" class="plink ghost">Source Code <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        async function loadVisitorCount() {
-            try {
-                const res = await fetch('https://YOUR_API_GATEWAY_URL/count', { method: 'POST' });
-                const data = await res.json();
-                document.getElementById('visitor-count').textContent = data.count ?? '—';
-            } catch {
-                document.getElementById('visitor-count').textContent = '—';
-            }
-        }
-        loadVisitorCount();
-    </script>
+<!-- RESUME -->
+<section id="resume">
+  <div style="max-width:960px;width:100%">
+    <div class="reveal">
+      <div class="slbl">Resume</div>
+      <h2 class="stitle">Background &amp;<br>expertise</h2>
+    </div>
+    <a href="portfolio/James_Ogbodu_Resume.pdf" download class="dlbtn reveal">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+    <div class="tabs reveal" id="tabs">
+      <button class="tab on" data-tab="skills">Skills</button>
+      <button class="tab" data-tab="experience">Experience</button>
+      <button class="tab" data-tab="education">Education</button>
+      <button class="tab" data-tab="certs">Certifications</button>
+    </div>
+    <div class="panel on" id="p-skills">
+      <div class="scat"><div class="scatttl">AWS Services</div>
+        <div class="ikgrid">
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonaws/ff9900" alt="AWS"><span>Amazon EC2</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazons3/ff9900" alt="S3"><span>Amazon S3</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/awslambda/ff9900" alt="Lambda"><span>AWS Lambda</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonapigateway/ff9900" alt="APIGW"><span>API Gateway</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazondynamodb/ff9900" alt="DDB"><span>DynamoDB</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonrds/ff9900" alt="RDS"><span>Amazon RDS</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonaws/ff9900" alt="CF"><span>CloudFront</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonaws/ff9900" alt="IAM"><span>IAM</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonaws/ff9900" alt="CW"><span>CloudWatch</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonaws/ff9900" alt="SNS"><span>SNS</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonaws/ff9900" alt="VPC"><span>VPC</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonaws/ff9900" alt="CLI"><span>AWS CLI</span></div>
+        </div>
+      </div>
+      <div class="scat"><div class="scatttl">Languages &amp; Tools</div>
+        <div class="ikgrid">
+          <div class="ik"><img src="https://cdn.simpleicons.org/python/3776ab" alt="Python"><span>Python</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/html5/e34f26" alt="HTML"><span>HTML5</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/css3/1572b6" alt="CSS"><span>CSS3</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/gnubash/4eaa25" alt="Bash"><span>Bash</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/linux/888888" alt="Linux"><span>Linux</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/git/f05032" alt="Git"><span>Git</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/github/888888" alt="GitHub"><span>GitHub</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/githubactions/2088ff" alt="Actions"><span>GitHub Actions</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/terraform/7b42bc" alt="Terraform"><span>Terraform</span></div>
+        </div>
+      </div>
+      <div class="scat"><div class="scatttl">Databases</div>
+        <div class="ikgrid">
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazondynamodb/ff9900" alt="DDB"><span>DynamoDB</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/mysql/4479a1" alt="MySQL"><span>MySQL</span></div>
+          <div class="ik"><img src="https://cdn.simpleicons.org/amazonrds/ff9900" alt="RDS"><span>Amazon RDS</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel" id="p-experience">
+      <div class="tli"><div class="tlt">Freelance Cloud Supporter</div><div class="tlm">Self-Employed &middot; 2024 &ndash; Present</div><div class="tld">Deploying and configuring AWS infrastructure, troubleshooting cloud environments, advising on cost optimisation, setting up IAM roles and security policies, and assisting with static website hosting on S3 with CloudFront delivery.</div></div>
+      <div class="tli"><div class="tlt">IT Department Intern</div><div class="tlm">INEC &middot; 7 Months</div><div class="tld">Systems administration, hardware maintenance, and technical support in a large government institution. Enterprise IT infrastructure and internal network management.</div></div>
+    </div>
+    <div class="panel" id="p-education">
+      <div class="tli"><div class="tlt">B.Sc. Computer Technology &mdash; GPA 3.69</div><div class="tlm">Babcock University &middot; 2021 &ndash; 2025</div><div class="tld">Programming fundamentals, computer architecture, operating systems, databases, networking, and software engineering.</div></div>
+      <div class="tli"><div class="tlt">Senior Secondary School Certificate</div><div class="tlm">Beacon Light High School &middot; 2015 &ndash; 2021</div><div class="tld">Science and mathematics focus building foundational analytical and problem-solving skills.</div></div>
+    </div>
+    <div class="panel" id="p-certs">
+      <div class="tli"><div class="tlt">AWS Certified Cloud Practitioner &mdash; CLF-C02</div><div class="tlm">Amazon Web Services</div><div class="tld">Validated foundational cloud knowledge across core AWS domains.</div><div class="cpills"><span class="cpill">&#9729; Cloud Concepts</span><span class="cpill">&#127959; AWS Infrastructure</span><span class="cpill">&#128274; Security &amp; Compliance</span></div></div>
+      <div class="tli"><div class="tlt">Certificate of Completion</div><div class="tlm">New Horizons</div><div class="tld">Industry-aligned technical certification covering key IT and computing competencies.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div style="max-width:960px;width:100%">
+    <div class="reveal"><div class="slbl">Contact</div><h2 class="stitle">Let's build<br>something together</h2></div>
+    <div class="vbadge reveal"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><span id="vcnt" class="vcnt">—</span>&nbsp;visitors</div>
+    <div class="cgrid reveal">
+      <div class="cinfo">
+        <div class="ci"><div class="cibox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="cilbl">Email</div><a href="mailto:Jamesogbodu18@gmail.com" class="civ">Jamesogbodu18@gmail.com</a></div></div>
+        <div class="ci"><div class="cibox"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="cilbl">LinkedIn</div><a href="https://www.linkedin.com/in/james-ogbodu-18953427a" target="_blank" class="civ">james-ogbodu</a></div></div>
+        <div class="ci"><div class="cibox"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></div><div><div class="cilbl">GitHub</div><a href="https://github.com/James-Tega" target="_blank" class="civ">James-Tega</a></div></div>
+        <div class="ci"><div class="cibox"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="cilbl">X / Twitter</div><a href="https://x.com/jamesogbod96056" target="_blank" class="civ">@jamesogbod96056</a></div></div>
+        <div class="ci"><div class="cibox"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="cilbl">Location</div><span class="civ">Lagos, Nigeria</span></div></div>
+      </div>
+      <div class="cform">
+        <div><label class="cfl">Full Name</label><input type="text" class="cfi" placeholder="Your name" id="cn"></div>
+        <div><label class="cfl">Email</label><input type="email" class="cfi" placeholder="you@example.com" id="ce"></div>
+        <div><label class="cfl">Message</label><textarea class="cfta" placeholder="What would you like to discuss?" id="cm"></textarea></div>
+        <button class="btn1" id="sbtn" style="width:100%">Send Message</button>
+        <div id="fmsg" style="font-size:11px;text-align:center;display:none;margin-top:6px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><p>Designed &amp; built by <b>James Ogbodu</b> &middot; Hosted on <b>AWS S3 + CloudFront</b></p><p style="margin-top:6px;font-size:9px">&copy; 2025 All rights reserved</p></footer>
+
+<script src="main.js"></script>
 </body>
 </html>
