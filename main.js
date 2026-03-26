@@ -242,7 +242,7 @@
   });
 
   // VISITOR COUNTER
-  fetch('https://YOUR_API_GATEWAY_URL/count', { method: 'POST' })
+  fetch('https://demqbmsh72.execute-api.us-east-1.amazonaws.com/count', { method: 'POST' })
     .then(function(r){ return r.json(); })
     .then(function(d){ document.getElementById('vcnt').textContent = d.count || '—'; })
     .catch(function(){ document.getElementById('vcnt').textContent = '—'; });
