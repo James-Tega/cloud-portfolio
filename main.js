@@ -215,7 +215,7 @@
   });
 
   // CONTACT FORM
-  document.getElementById('sbtn').addEventListener('click', function(){
+  document.getElementById('sbtn').addEventListener('click', async function(){
     var n = document.getElementById('cn').value.trim();
     var e = document.getElementById('ce').value.trim();
     var m = document.getElementById('cm').value.trim();
@@ -229,16 +229,33 @@
     var btn = this;
     btn.textContent = 'Sending...';
     btn.disabled = true;
-    setTimeout(function(){
+    msg.style.display = 'none';
+    try {
+      var res = await fetch('https://y4s34jwj93.execute-api.us-east-1.amazonaws.com/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: n, email: e, message: m })
+      });
+      var data = await res.json();
+      if(res.ok){
+        msg.style.display = 'block';
+        msg.style.color = 'var(--green)';
+        msg.textContent = "Message sent! I'll get back to you soon.";
+        document.getElementById('cn').value = '';
+        document.getElementById('ce').value = '';
+        document.getElementById('cm').value = '';
+      } else {
+        msg.style.display = 'block';
+        msg.style.color = 'var(--aws)';
+        msg.textContent = 'Something went wrong. Please try again.';
+      }
+    } catch(err) {
       msg.style.display = 'block';
-      msg.style.color = 'var(--green)';
-      msg.textContent = "Message sent! I'll get back to you soon.";
-      btn.textContent = 'Send Message';
-      btn.disabled = false;
-      document.getElementById('cn').value = '';
-      document.getElementById('ce').value = '';
-      document.getElementById('cm').value = '';
-    }, 900);
+      msg.style.color = 'var(--aws)';
+      msg.textContent = 'Network error. Please try again.';
+    }
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
   });
 
   // VISITOR COUNTER
