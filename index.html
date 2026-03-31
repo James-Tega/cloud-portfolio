@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>James Ogbodu — Cloud Engineer</title>
+<meta name="description" content="James Ogbodu is an AWS-certified cloud engineer from Lagos, Nigeria, specialising in serverless architecture, Lambda, DynamoDB, S3, and CloudFront.">
+<!-- Open Graph — update YOUR-CLOUDFRONT-URL to your live CloudFront domain -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="James Ogbodu — AWS Cloud Engineer">
+<meta property="og:description" content="AWS-certified cloud engineer building scalable, serverless infrastructure. Live projects on S3, CloudFront, Lambda, DynamoDB, and API Gateway.">
+<meta property="og:image" content="https://d2mef3mxp6f2cq.cloudfront.net/portfolio/profile pic.jpg">
+<meta property="og:url" content="https://d2mef3mxp6f2cq.cloudfront.net">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="James Ogbodu — AWS Cloud Engineer">
+<meta name="twitter:description" content="AWS-certified cloud engineer building scalable, serverless infrastructure.">
+<meta name="twitter:image" content="https://d2mef3mxp6f2cq.cloudfront.net/portfolio/profile pic.jpg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -142,6 +154,38 @@
             <a href="https://d3jd94tvt098le.cloudfront.net" target="_blank" class="plink">Live <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             <a href="https://github.com/James-Tega/Severless-feedback" target="_blank" class="plink ghost">Source Code <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
+          <button class="arch-toggle">Architecture <span>&#9660;</span></button>
+          <div class="arch-wrap">
+            <svg viewBox="0 0 262 80" xmlns="http://www.w3.org/2000/svg" class="arch-svg">
+              <defs>
+                <marker id="p1-o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#ff9900" stroke-width="1.5" stroke-linecap="round"/></marker>
+                <marker id="p1-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/></marker>
+                <marker id="p1-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#00e676" stroke-width="1.5" stroke-linecap="round"/></marker>
+              </defs>
+              <rect x="2" y="4" width="42" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="23" y="20" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">USER</text>
+              <line x1="44" y1="16" x2="58" y2="16" stroke="#ff9900" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p1-o)"/>
+              <rect x="60" y="4" width="62" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="91" y="13" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">CloudFront</text>
+              <text x="91" y="23" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">CDN + HTTPS</text>
+              <line x1="122" y1="16" x2="136" y2="16" stroke="#ff9900" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p1-o)"/>
+              <rect x="138" y="4" width="52" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="164" y="13" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">Amazon S3</text>
+              <text x="164" y="23" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">Static Files</text>
+              <line x1="91" y1="28" x2="91" y2="46" stroke="#00d4ff" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p1-b)"/>
+              <rect x="60" y="48" width="62" height="26" rx="3" fill="#0f1923" stroke="#00d4ff" stroke-width="1"/>
+              <text x="91" y="59" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#00d4ff">API Gateway</text>
+              <text x="91" y="69" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">HTTP API</text>
+              <line x1="122" y1="61" x2="136" y2="61" stroke="#00d4ff" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p1-b)"/>
+              <rect x="138" y="48" width="52" height="26" rx="3" fill="#0f1923" stroke="#00d4ff" stroke-width="1"/>
+              <text x="164" y="59" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#00d4ff">Lambda</text>
+              <text x="164" y="69" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">Python</text>
+              <line x1="190" y1="61" x2="202" y2="61" stroke="#00e676" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p1-g)"/>
+              <rect x="204" y="48" width="56" height="26" rx="3" fill="#0f1923" stroke="#00e676" stroke-width="1"/>
+              <text x="232" y="59" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#00e676">DynamoDB</text>
+              <text x="232" y="69" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">NoSQL DB</text>
+            </svg>
+          </div>
         </div>
       </div>
       <div class="pcard" data-cat="static">
@@ -150,11 +194,63 @@
           You&apos;re looking at it!
         </div>
         <div class="pbody">
-          <div class="ptags"><span class="ptag">S3</span><span class="ptag">CloudFront</span><span class="ptag">Lambda</span><span class="ptag">DynamoDB</span><span class="ptag">CI/CD</span><span class="ptag">SNS</span></div>
+          <div class="ptags"><span class="ptag">S3</span><span class="ptag">CloudFront</span><span class="ptag">Lambda</span><span class="ptag">DynamoDB</span><span class="ptag">CI/CD</span><span class="ptag">SNS</span><span class="ptag">CloudWatch</span></div>
           <div class="pname">Cloud Portfolio Challenge</div>
-          <div class="pdesc">This portfolio site — hosted on S3, delivered via CloudFront, with a live visitor counter, contact form via SNS, and auto-deployed through GitHub Actions.</div>
+          <div class="pdesc">This portfolio site — hosted on S3, delivered via CloudFront, with a live visitor counter, contact form via SNS, CloudWatch monitoring, and auto-deployed through GitHub Actions.</div>
           <div class="plinks">
             <a href="https://github.com/James-Tega/cloud-portfolio" target="_blank" class="plink ghost">Source Code <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+          <button class="arch-toggle">Architecture <span>&#9660;</span></button>
+          <div class="arch-wrap">
+            <svg viewBox="0 0 262 112" xmlns="http://www.w3.org/2000/svg" class="arch-svg">
+              <defs>
+                <marker id="p2-o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#ff9900" stroke-width="1.5" stroke-linecap="round"/></marker>
+                <marker id="p2-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/></marker>
+                <marker id="p2-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#00e676" stroke-width="1.5" stroke-linecap="round"/></marker>
+                <marker id="p2-a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#ff9900" stroke-width="1.5" stroke-linecap="round"/></marker>
+              </defs>
+              <!-- Row 1: static hosting -->
+              <rect x="2" y="4" width="42" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="23" y="20" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">USER</text>
+              <line x1="44" y1="16" x2="58" y2="16" stroke="#ff9900" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p2-o)"/>
+              <rect x="60" y="4" width="62" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="91" y="13" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">CloudFront</text>
+              <text x="91" y="23" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">CDN + HTTPS</text>
+              <line x1="122" y1="16" x2="136" y2="16" stroke="#ff9900" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p2-o)"/>
+              <rect x="138" y="4" width="52" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="164" y="13" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">Amazon S3</text>
+              <text x="164" y="23" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">Static Files</text>
+              <!-- CF down to API GW -->
+              <line x1="91" y1="28" x2="91" y2="46" stroke="#00d4ff" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p2-b)"/>
+              <!-- Row 2: API path -->
+              <rect x="60" y="48" width="62" height="26" rx="3" fill="#0f1923" stroke="#00d4ff" stroke-width="1"/>
+              <text x="91" y="59" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#00d4ff">API Gateway</text>
+              <text x="91" y="69" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">HTTP API</text>
+              <line x1="122" y1="61" x2="136" y2="61" stroke="#00d4ff" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p2-b)"/>
+              <rect x="138" y="48" width="52" height="26" rx="3" fill="#0f1923" stroke="#00d4ff" stroke-width="1"/>
+              <text x="164" y="59" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#00d4ff">Lambda</text>
+              <text x="164" y="69" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">Python</text>
+              <line x1="190" y1="61" x2="202" y2="61" stroke="#00e676" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p2-g)"/>
+              <rect x="204" y="48" width="56" height="26" rx="3" fill="#0f1923" stroke="#00e676" stroke-width="1"/>
+              <text x="232" y="59" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#00e676">DynamoDB</text>
+              <text x="232" y="69" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">NoSQL DB</text>
+              <!-- Lambda down to SNS -->
+              <line x1="164" y1="74" x2="164" y2="82" stroke="#ff9900" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p2-a)"/>
+              <rect x="138" y="84" width="52" height="22" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="164" y="98" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">SNS &#8594; Email</text>
+              <!-- CI/CD label -->
+              <text x="2" y="110" font-family="JetBrains Mono" font-size="6" fill="#4a5568">&#9654; CI/CD: GitHub Actions auto-deploys to S3 on every push to main</text>
+            </svg>
+          </div>
+          <!-- LIGHTHOUSE: Run Lighthouse on your live CloudFront URL and update these scores -->
+          <div class="lh-wrap">
+            <div class="lh-title">Lighthouse Scores</div>
+            <div class="lh-scores">
+              <div class="lh-s"><span class="lh-n lh-y" id="lh-perf">71</span><span class="lh-l">Perf</span></div>
+              <div class="lh-s"><span class="lh-n lh-g" id="lh-a11y">90</span><span class="lh-l">Access&shy;ibility</span></div>
+              <div class="lh-s"><span class="lh-n lh-g" id="lh-bp">96</span><span class="lh-l">Best Prac&shy;tices</span></div>
+              <div class="lh-s"><span class="lh-n lh-g" id="lh-seo">91</span><span class="lh-l">SEO</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -166,6 +262,31 @@
           <div class="pdesc">PHP + MySQL on EC2 connected to Amazon RDS. Full database integration with VPC security groups.</div>
           <div class="plinks">
             <a href="https://github.com/James-Tega" target="_blank" class="plink ghost">Source Code <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+          <button class="arch-toggle">Architecture <span>&#9660;</span></button>
+          <div class="arch-wrap">
+            <svg viewBox="0 0 262 60" xmlns="http://www.w3.org/2000/svg" class="arch-svg">
+              <defs>
+                <marker id="p3-o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#ff9900" stroke-width="1.5" stroke-linecap="round"/></marker>
+                <marker id="p3-b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round"/></marker>
+              </defs>
+              <!-- VPC boundary -->
+              <rect x="68" y="4" width="190" height="50" rx="4" fill="none" stroke="#4a5568" stroke-width="1" stroke-dasharray="4 3"/>
+              <text x="74" y="13" font-family="JetBrains Mono" font-size="6" fill="#4a5568">VPC</text>
+              <!-- USER -->
+              <rect x="2" y="16" width="42" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="23" y="32" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">USER</text>
+              <line x1="44" y1="28" x2="76" y2="28" stroke="#ff9900" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p3-o)"/>
+              <!-- EC2 -->
+              <rect x="78" y="16" width="64" height="24" rx="3" fill="#0f1923" stroke="#ff9900" stroke-width="1"/>
+              <text x="110" y="25" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#ff9900">Amazon EC2</text>
+              <text x="110" y="35" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">PHP App</text>
+              <line x1="142" y1="28" x2="156" y2="28" stroke="#00d4ff" stroke-width=".8" stroke-dasharray="3 2" marker-end="url(#p3-b)"/>
+              <!-- RDS -->
+              <rect x="158" y="16" width="92" height="24" rx="3" fill="#0f1923" stroke="#00d4ff" stroke-width="1"/>
+              <text x="204" y="25" text-anchor="middle" font-family="JetBrains Mono" font-size="7" fill="#00d4ff">Amazon RDS</text>
+              <text x="204" y="35" text-anchor="middle" font-family="JetBrains Mono" font-size="6" fill="#4a5568">MySQL Database</text>
+            </svg>
           </div>
         </div>
       </div>

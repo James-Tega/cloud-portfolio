@@ -205,6 +205,16 @@
     });
   });
 
+  // ARCHITECTURE DIAGRAM TOGGLES
+  document.querySelectorAll('.arch-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var wrap = this.nextElementSibling;
+      var open = wrap.classList.toggle('open');
+      this.classList.toggle('open', open);
+      this.querySelector('span').textContent = open ? '\u25b4' : '\u25bc';
+    });
+  });
+
   // PROJECT CARD GLOW
   document.querySelectorAll('.pcard').forEach(function(card){
     card.addEventListener('mousemove', function(e){

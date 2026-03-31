@@ -142,5 +142,21 @@ footer b{color:var(--aws);font-weight:400}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--aws);border-radius:2px}
+/* Architecture diagram toggle */
+.arch-toggle{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--muted2);border:1px solid var(--border2);padding:5px 11px;border-radius:4px;cursor:pointer;transition:all .2s;background:transparent;font-family:var(--fm);letter-spacing:.04em;margin-top:10px}
+.arch-toggle:hover,.arch-toggle.open{border-color:var(--aws);color:var(--aws)}
+.arch-wrap{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.arch-wrap.open{max-height:240px;margin-top:8px}
+.arch-svg{width:100%}
+[data-theme="light"] .arch-svg rect{fill:#f0f2f5}
+/* Lighthouse badge */
+.lh-wrap{margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.lh-title{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.lh-scores{display:flex;gap:6px}
+.lh-s{display:flex;flex-direction:column;align-items:center;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:6px 10px;min-width:52px}
+.lh-n{font-family:var(--fd);font-size:15px;font-weight:800;line-height:1}
+.lh-l{font-size:7px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:3px;text-align:center;line-height:1.4}
+.lh-g{color:#0cce6b}
+.lh-y{color:#ffa400}
 @media(max-width:1024px){nav{display:none}section{padding:72px 24px}#hero,#about,#portfolio,#resume,#contact{padding-left:24px}.hvis{display:none}.cgrid,.about-grid{grid-template-columns:1fr}.about-services{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.cta,.stats-row{flex-wrap:wrap}.pgrid{grid-template-columns:1fr}.about-services{grid-template-columns:1fr}}
